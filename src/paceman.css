@@ -1,0 +1,43 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.paceman {
+    height:200px;
+    width:200px;
+}
+
+.fadein {
+    animation: fadein 1.5s ease 0s 1 normal forwards;
+}
+
+@keyframes fadein {
+	0% {
+		opacity: 0;
+		transform: scale(0.6);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+.postanim {
+	animation: postanim 2s ease 0s 1 normal forwards;
+}
+
+@keyframes postanim {
+	0% {
+		opacity: 1;
+		transform: scale(1);
+	}
+
+	100% {
+		opacity: 0;
+		transform: scale(0.6);
+	}
+}
