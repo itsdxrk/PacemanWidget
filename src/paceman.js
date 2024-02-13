@@ -5,11 +5,6 @@ paceman.addEventListener("click", animateonce);
 
 function animateonce() {
     paceman.classList.add("fadein");
-    getAPIData().then(response => {
-        text.textContent = response[1]["nickname"];
-    }).catch(error => {
-        console.error("Error:", error);
-    })
     setTimeout(() => {
         paceman.classList.remove("fadein");
     }, 1500);
@@ -34,3 +29,13 @@ async function getAPIData() {
     })
     return (response.json());
 }
+
+function displayPlayer() {
+    getAPIData().then(response => {
+        text.textContent = response[1]["nickname"];
+    }).catch(error => {
+        console.error("Error:", error);
+    })
+}
+
+setInterval(displayPlayer(), 3000);
